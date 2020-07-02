@@ -18,10 +18,21 @@ public class WebAnnotation {
     private String annotationContent;
 
     public WebAnnotation() {
+        System.out.println("WebAnnotation construct 0");
+    }
 
+    public WebAnnotation(String annotationContent ) {
+        System.out.println("WebAnnotation construct 1 "+annotationContent);
+        this.annotationContent = annotationContent;
+    }
+
+    public WebAnnotation(Date entryAdded) {
+        System.out.println("WebAnnotation construct 2");
+        this.entryAdded = entryAdded;
     }
 
     public WebAnnotation(Date entryAdded, String annotationContent) {
+        System.out.println("WebAnnotation construct 3");
         this.entryAdded = entryAdded;
         this.annotationContent = annotationContent;
     }
@@ -31,6 +42,7 @@ public class WebAnnotation {
     }
 
     public void setId(UUID id) {
+        System.out.println("WebAnnotation setId " + id);
         this.id = id;
     }
 
@@ -39,6 +51,7 @@ public class WebAnnotation {
     }
 
     public void setEntryAdded(Date entryAdded) {
+        System.out.println("WebAnnotation setEntryAdded " + entryAdded);
         this.entryAdded = entryAdded;
     }
 
@@ -47,6 +60,7 @@ public class WebAnnotation {
     }
 
     public void setEntryEdited(Date entryEdited) {
+        System.out.println("WebAnnotation setEntryEdited " + entryEdited);
         this.entryEdited = entryEdited;
     }
 
@@ -55,6 +69,7 @@ public class WebAnnotation {
     }
 
     public void setAnnotationContent(String annotationContent) {
+        System.out.println("WebAnnotation setAnnotationContent " + annotationContent);
         this.annotationContent = annotationContent;
     }
 }
